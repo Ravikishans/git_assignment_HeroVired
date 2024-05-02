@@ -12,10 +12,16 @@ step4- now we can open vscode by command "code ."
 step5- now we write python script in vscode for calculating add,substract,devide and multiply
 step6- now in git bash add and commit the code in dev branch by commands "git add ." and "git commit -m "version1""
 step6- come back to main branch and merge dev branch into main branch then push the code to the repository by commands- "git checkout main" ; "git init" ; "git commit -a" ; "git push"
-step7- 
+step7- add a collabirator in the repository
+step8- create and checkout in branch "feature/sqrt" by cmd "git checkout -b feature/sqrt" and add half "sqrt" code in the CalculatorPlus.py now "git commit -a" for keeping the branch up to date
+step9- checkout to the "dev" branch by cmd "git checkout dev" and add the error fixing code in the CalculatorPlus.py file. by opening vs code by cmd "code ." . Now add and commit the change "git commit -a"
+step10- go back to "feature/sqrt" branch and add the remaining code of "sqrt" in the CalculatorPlus.py and after adding and commiting checkout to the "dev" branch
+step11- now merge the "feature/sqrt"branch in "dev" branch by "git merge feature/sqrt" and pull the request for reviewing by collaborator from both the branches "dev" and "feature/sqrt" and after reviewing the request solve the conflict by "vi CalculatorPlus.py" and merge both the branches.
+step12- merge the "dev" branch to "main" branch and push the code to the repository.
 
 
 TASK 2--
+
 
 step1- install Git LFS on your system from website https://git-lfs.github.com/
 step2- now initialize Git LFS in your repository. command "git lfs install"
@@ -25,6 +31,7 @@ step5- now add commit and push to main and the merge and the push it to the repo
 
 
 TASK 3--
+
 
 step1- create a branch "geometry-calculator" and create a pyton file "geo_cal.py".      commands "git checkout -b geometry-calculator" and "touch geo_cal.py" after this add and commit the changes
 step2- now use the "git log" command and copy the commit id
