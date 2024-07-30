@@ -1,45 +1,184 @@
-# git_assignment_HeroVired
-step1- creating a git-hub repository by the name of 'git-_assignment-HeroVired'
-step2- clicking on the 'code' menu and couping the 'https' url
-step3- opening git bash in your computer and cloning the repository by "git clone" command in respective folder
-now when the repository is cloned in local computer we can start the tasks
+# Git Assignment - Hero Vired
 
-TASK 1--
+## Repository Overview
 
-step1- for starting the task 1 we have to creat a new branch named "dev" and checkingout in it by command "git checkout -b dev"
-step3- now we have to create a new python script named "CalculatorPlus.py" by               command "touch CalculatorPlus.py"
-step4- now we can open vscode by command "code ."
-step5- now we write python script in vscode for calculating add,substract,devide and multiply
-step6- now in git bash add and commit the code in dev branch by commands "git add ." and "git commit -m "version1""
-step6- come back to main branch and merge dev branch into main branch then push the code to the repository by commands- "git checkout main" ; "git init" ; "git commit -a" ; "git push"
-step7- add a collabirator in the repository
-step8- create and checkout in branch "feature/sqrt" by cmd "git checkout -b feature/sqrt" and add half "sqrt" code in the CalculatorPlus.py now "git commit -a" for keeping the branch up to date
-step9- checkout to the "dev" branch by cmd "git checkout dev" and add the error fixing code in the CalculatorPlus.py file. by opening vs code by cmd "code ." . Now add and commit the change "git commit -a"
-step10- go back to "feature/sqrt" branch and add the remaining code of "sqrt" in the CalculatorPlus.py and after adding and commiting checkout to the "dev" branch
-step11- now merge the "feature/sqrt"branch in "dev" branch by "git merge feature/sqrt" and pull the request for reviewing by collaborator from both the branches "dev" and "feature/sqrt" and after reviewing the request solve the conflict by "vi CalculatorPlus.py" and merge both the branches.
-step12- merge the "dev" branch to "main" branch and push the code to the repository.
+This repository contains a series of tasks related to Git and GitHub, involving creating branches, merging, handling large files with Git LFS, and implementing features for a calculator and geometry calculator.
 
+### Files in Repository
+- `CalculatorPlus.py`: A Python script with basic calculator functions.
+- `geo_cal.py`: A Python script for geometry calculations.
+- `large_file.bin`: A large binary file used for demonstrating Git LFS.
+- `README.md`: This file.
 
-TASK 2--
+## Getting Started
 
+### Cloning the Repository
+To clone the repository to your local machine, run:
+```bash
+git clone https://github.com/Ravikishans/git_assignment_HeroVired.git
+cd git_assignment_HeroVired
+```
 
-step1- install Git LFS on your system from website https://git-lfs.github.com/
-step2- now initialize Git LFS in your repository. command "git lfs install"
-step3- now create a branch named lfs and checkout in it. command "git checkout -b lfs"
-step4- creating a large binary file in git bash. command- "dd if=/dev/urandom of=large_file.bin bs=1M count=200"
-step5- now add commit and push to main and the merge and the push it to the repository. commands- "git commit -a" ; "git checkout main" ; "git init" ; "git commit -a" ; "git merge lfs" ; "git lfs install" ; "git lfs track "*.bin"" ; "git add .attributes" ; "git add large_file.bin" ; "git commit -a" ; "git push origin main"
+### Task 1: Basic Calculator Features
 
+1. **Create and Switch to `dev` Branch**
+    ```bash
+    git checkout -b dev
+    ```
 
-TASK 3--
+2. **Create and Edit `CalculatorPlus.py`**
+    ```bash
+    touch CalculatorPlus.py
+    code .
+    ```
+    Write the Python script for calculating addition, subtraction, division, and multiplication.
 
+3. **Commit Changes in `dev` Branch**
+    ```bash
+    git add .
+    git commit -m "Initial version of CalculatorPlus.py"
+    ```
 
-step1- create a branch "geometry-calculator" and create a pyton file "geo_cal.py".      commands "git checkout -b geometry-calculator" and "touch geo_cal.py" after this add and commit the changes
-step2- now use the "git log" command and copy the commit id
-step3- create a new branch "feature/circle-area" and cherry pick the geo_cal.py file using commands- "git checkout -b feature/circle-area" and "git cherry-pick commitId"
-step4- now write the code in for circlefeature in geo_cal.py and stash it in the middle of it by using command "git stash"
-step5- create a new branch "feature/rectangle-area" and do the same things we did in the step3 and step4 by writing code for rectangle feature.
-step6- now come back to "feature/circle-area" branch and by adding and commiting appply command "git stash apply"
-step7- now write the full code for circle feature and the apply add and commit and checkout to "feature/rectangle-area" branch
-step8- repeat the same step6 and step7 process for rectangle area and checkout to "geomerty-calculator" branch.
-step9- now merge both "feature/circle_area" and "feature/rectangle_area" using "git merge" command and solve the merge conflicts by uniforming the code with help of "vi" command and then apply "git commmit -a" and "git checkout main" command to checkout to main command
-step10- merge the "geomerty-calculator" branch to main branch and push the code to the git repository
+4. **Merge `dev` Branch into `main` and Push**
+    ```bash
+    git checkout main
+    git merge dev
+    git push origin main
+    ```
+
+5. **Add Collaborator to Repository**
+
+6. **Create `feature/sqrt` Branch and Implement Square Root Feature**
+    ```bash
+    git checkout -b feature/sqrt
+    # Add partial sqrt code to CalculatorPlus.py
+    git commit -a -m "Add partial sqrt code"
+    ```
+
+7. **Switch Back to `dev` Branch and Fix Errors**
+    ```bash
+    git checkout dev
+    # Fix errors in CalculatorPlus.py
+    git commit -a -m "Fix errors in CalculatorPlus.py"
+    ```
+
+8. **Complete Square Root Feature in `feature/sqrt` Branch**
+    ```bash
+    git checkout feature/sqrt
+    # Complete sqrt code
+    git commit -a -m "Complete sqrt code"
+    ```
+
+9. **Merge `feature/sqrt` into `dev` and Push for Review**
+    ```bash
+    git checkout dev
+    git merge feature/sqrt
+    # Push for collaborator review
+    ```
+
+10. **Resolve Conflicts and Merge into `main`**
+    ```bash
+    git checkout main
+    git merge dev
+    git push origin main
+    ```
+
+### Task 2: Handling Large Files with Git LFS
+
+1. **Install Git LFS**
+    ```bash
+    git lfs install
+    ```
+
+2. **Create and Switch to `lfs` Branch**
+    ```bash
+    git checkout -b lfs
+    ```
+
+3. **Create Large Binary File**
+    ```bash
+    dd if=/dev/urandom of=large_file.bin bs=1M count=200
+    ```
+
+4. **Track and Commit Large File**
+    ```bash
+    git lfs track "*.bin"
+    git add .gitattributes
+    git add large_file.bin
+    git commit -m "Add large binary file"
+    git push origin lfs
+    ```
+
+5. **Merge `lfs` Branch into `main`**
+    ```bash
+    git checkout main
+    git merge lfs
+    git push origin main
+    ```
+
+### Task 3: Geometry Calculator
+
+1. **Create and Switch to `geometry-calculator` Branch**
+    ```bash
+    git checkout -b geometry-calculator
+    touch geo_cal.py
+    ```
+
+2. **Commit Initial Version of `geo_cal.py`**
+    ```bash
+    git add geo_cal.py
+    git commit -m "Add initial geo_cal.py"
+    ```
+
+3. **Create `feature/circle-area` Branch and Cherry-Pick Commit**
+    ```bash
+    git checkout -b feature/circle-area
+    git cherry-pick <commit-id>
+    ```
+
+4. **Implement Circle Area Feature and Stash Changes**
+    ```bash
+    # Write circle area code
+    git stash
+    ```
+
+5. **Create `feature/rectangle-area` Branch and Cherry-Pick Commit**
+    ```bash
+    git checkout -b feature/rectangle-area
+    git cherry-pick <commit-id>
+    ```
+
+6. **Implement Rectangle Area Feature and Stash Changes**
+    ```bash
+    # Write rectangle area code
+    git stash
+    ```
+
+7. **Apply Stashed Changes in `feature/circle-area` Branch**
+    ```bash
+    git checkout feature/circle-area
+    git stash apply
+    git add .
+    git commit -m "Complete circle area feature"
+    ```
+
+8. **Apply Stashed Changes in `feature/rectangle-area` Branch**
+    ```bash
+    git checkout feature/rectangle-area
+    git stash apply
+    git add .
+    git commit -m "Complete rectangle area feature"
+    ```
+
+9. **Merge `feature/circle-area` and `feature/rectangle-area` into `geometry-calculator`**
+    ```bash
+    git checkout geometry-calculator
+    git merge feature/circle-area
+    git merge feature/rectangle-area
+    ```
+
+10. **Resolve Conflicts, Merge into `main`, and Push**
+    ```bash
+    git checkout main
+    git merge geometry-calculator
+    git push origin main
